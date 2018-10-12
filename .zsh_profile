@@ -1,0 +1,27 @@
+#export http_proxy='http://web-proxy.oa.com:8080'
+#export https_proxy='http://web-proxy.oa.com:8080'
+#export HOMEBREW_BOTTLE_DOMAIN=http://android.oa.com/homebrew/
+
+#if brew list | grep coreutils > /dev/null; then
+#	PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+#	alias ls='ls -F --show-control-chars --color=auto'
+#	eval `gdircolors -b $HOME/.dir_colors`
+#fi
+
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+
+alias ctags="`brew --prefix`/bin/ctags"
+
+export MYVIMRC=~/.vimrc
+
+#Functions
+	# Custom cd
+	c() {
+		cd $1;
+		ls;
+	}
+alias cd="c"
+
+PATH=$PATH:$HOME/.bin/
